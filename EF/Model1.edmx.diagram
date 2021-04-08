@@ -5,29 +5,29 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="3dd6e2440b8c49e7bc0d2d4ec4645a73" Name="Diagram1">
-        <EntityTypeShape EntityType="BeautySalon_BrovushkaDBModel.Client" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="BeautySalon_BrovushkaDBModel.ClientService" Width="1.5" PointX="3" PointY="9.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="BeautySalon_BrovushkaDBModel.DocumentByService" Width="1.5" PointX="5.25" PointY="10" IsExpanded="true" />
-        <EntityTypeShape EntityType="BeautySalon_BrovushkaDBModel.Gender" Width="1.5" PointX="1.5" PointY="13.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="BeautySalon_BrovushkaDBModel.Manufacturer" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="BeautySalon_BrovushkaDBModel.Product" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="BeautySalon_BrovushkaDBModel.ProductPhoto" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="BeautySalon_BrovushkaDBModel.ProductSale" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BeautySalon_BrovushkaDBModel.Service" Width="1.5" PointX="0.75" PointY="16.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BeautySalon_BrovushkaDBModel.ServicePhoto" Width="1.5" PointX="3" PointY="19.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="BeautySalon_BrovushkaDBModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="7.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="BeautySalon_BrovushkaDBModel.Tag" Width="1.5" PointX="3" PointY="16.25" IsExpanded="true" />
-        <AssociationConnector Association="BeautySalon_BrovushkaDBModel.FK_Client_Gender" ManuallyRouted="false" />
-        <AssociationConnector Association="BeautySalon_BrovushkaDBModel.FK_ClientService_Client" ManuallyRouted="false" />
-        <AssociationConnector Association="BeautySalon_BrovushkaDBModel.FK_ClientService_Service" ManuallyRouted="false" />
-        <AssociationConnector Association="BeautySalon_BrovushkaDBModel.FK_DocumentByService_ClientService" ManuallyRouted="false" />
-        <AssociationConnector Association="BeautySalon_BrovushkaDBModel.FK_ProductSale_ClientService" ManuallyRouted="false" />
-        <AssociationConnector Association="BeautySalon_BrovushkaDBModel.FK_Product_Manufacturer" ManuallyRouted="false" />
-        <AssociationConnector Association="BeautySalon_BrovushkaDBModel.FK_ProductPhoto_Product" ManuallyRouted="false" />
-        <AssociationConnector Association="BeautySalon_BrovushkaDBModel.FK_ProductSale_Product" ManuallyRouted="false" />
-        <AssociationConnector Association="BeautySalon_BrovushkaDBModel.FK_ServicePhoto_Service" ManuallyRouted="false" />
-        <AssociationConnector Association="BeautySalon_BrovushkaDBModel.AttachedProduct" ManuallyRouted="false" />
-        <AssociationConnector Association="BeautySalon_BrovushkaDBModel.TagOfClient" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="BeautySalon_BrovushkaDBModel.Client" Width="1.5" PointX="0.75" PointY="10.5" />
+        <EntityTypeShape EntityType="BeautySalon_BrovushkaDBModel.ClientService" Width="1.5" PointX="3" PointY="9.125" />
+        <EntityTypeShape EntityType="BeautySalon_BrovushkaDBModel.DocumentByService" Width="1.5" PointX="5.25" PointY="9.625" />
+        <EntityTypeShape EntityType="BeautySalon_BrovushkaDBModel.Gender" Width="1.5" PointX="1.5" PointY="15.5" />
+        <EntityTypeShape EntityType="BeautySalon_BrovushkaDBModel.Manufacturer" Width="1.5" PointX="0.75" PointY="2.625" />
+        <EntityTypeShape EntityType="BeautySalon_BrovushkaDBModel.Product" Width="1.5" PointX="3" PointY="1.875" />
+        <EntityTypeShape EntityType="BeautySalon_BrovushkaDBModel.ProductPhoto" Width="1.5" PointX="5.25" PointY="5.75" />
+        <EntityTypeShape EntityType="BeautySalon_BrovushkaDBModel.ProductSale" Width="1.5" PointX="5.25" PointY="2.375" />
+        <EntityTypeShape EntityType="BeautySalon_BrovushkaDBModel.Service" Width="1.5" PointX="0.75" PointY="7" />
+        <EntityTypeShape EntityType="BeautySalon_BrovushkaDBModel.ServicePhoto" Width="1.5" PointX="3" PointY="18.5" />
+        <EntityTypeShape EntityType="BeautySalon_BrovushkaDBModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BeautySalon_BrovushkaDBModel.Tag" Width="1.5" PointX="3" PointY="6.375" />
+        <AssociationConnector Association="BeautySalon_BrovushkaDBModel.FK_Client_Gender" />
+        <AssociationConnector Association="BeautySalon_BrovushkaDBModel.FK_ClientService_Client" />
+        <AssociationConnector Association="BeautySalon_BrovushkaDBModel.FK_ClientService_Service" />
+        <AssociationConnector Association="BeautySalon_BrovushkaDBModel.FK_DocumentByService_ClientService" />
+        <AssociationConnector Association="BeautySalon_BrovushkaDBModel.FK_ProductSale_ClientService" />
+        <AssociationConnector Association="BeautySalon_BrovushkaDBModel.FK_Product_Manufacturer" />
+        <AssociationConnector Association="BeautySalon_BrovushkaDBModel.FK_ProductPhoto_Product" />
+        <AssociationConnector Association="BeautySalon_BrovushkaDBModel.FK_ProductSale_Product" />
+        <AssociationConnector Association="BeautySalon_BrovushkaDBModel.FK_ServicePhoto_Service" />
+        <AssociationConnector Association="BeautySalon_BrovushkaDBModel.AttachedProduct" />
+        <AssociationConnector Association="BeautySalon_BrovushkaDBModel.TagOfClient" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

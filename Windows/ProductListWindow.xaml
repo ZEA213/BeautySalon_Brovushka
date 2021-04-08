@@ -45,5 +45,58 @@
                    VerticalAlignment="Center" HorizontalAlignment="Left"
                    Margin="20,0" TextAlignment="Left"
                    FontSize="18" FontFamily="Tahoma"/>
+
+        <ListView Name="LVProduct" Grid.Row="3"
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Height="350" Width="200">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition/>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Border Grid.Row="0" Grid.RowSpan="5" Background="{Binding GetColor}"
+                                BorderBrush="Black" BorderThickness="1"/>
+
+                        <Image Grid.Row="0" Margin="5">
+                            <Image.Source>
+                                <Binding Path="GetImage">
+                                    <Binding.TargetNullValue>
+                                        /Resources/beauty_logo.png
+                                    </Binding.TargetNullValue>
+                                </Binding>
+                            </Image.Source>
+                        </Image>
+
+                        <TextBlock Grid.Row="2" Text="{Binding Title}"
+                                   VerticalAlignment="Center"
+                                   TextWrapping="Wrap" Width="170"
+                                   TextAlignment="Center"
+                                   FontSize="14" FontFamily="Tahoma"/>
+
+                        <TextBlock Grid.Row="3" Text="{Binding GetCost}"
+                                   VerticalAlignment="Center"
+                                   TextWrapping="Wrap" Width="120"
+                                   TextAlignment="Center"
+                                   FontSize="14" FontFamily="Tahoma"/>
+
+                        <TextBlock Grid.Row="4" Text="{Binding GetActive}"
+                                   VerticalAlignment="Center"
+                                   TextWrapping="Wrap" Width="120"
+                                   TextAlignment="Center"
+                                   FontSize="12" FontFamily="Tahoma"/>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </Window>

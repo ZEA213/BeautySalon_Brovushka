@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using static BeautySalon_Brovushka.EF.AppData;
 
 namespace BeautySalon_Brovushka.Windows
 {
@@ -22,6 +23,7 @@ namespace BeautySalon_Brovushka.Windows
         public ProductListWindow()
         {
             InitializeComponent();
+            LVProduct.ItemsSource = Context.Product.OrderBy(i => i.ID).ToList();
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
