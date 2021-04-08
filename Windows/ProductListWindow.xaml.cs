@@ -51,7 +51,7 @@ namespace BeautySalon_Brovushka.Windows
 
         private void Filter()
         {
-            //Фильтрация и поиск не работает
+            //Фильтрация и поиск не работает 
             ProductList = Context.Product.OrderBy(i => i.ID).ToList();
             //Фильтрация
             if (CBManufacturer.SelectedIndex > 0)
