@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BeautySalon_Brovushka.EF;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,10 +21,29 @@ namespace BeautySalon_Brovushka.Windows
     /// </summary>
     public partial class ProductListWindow : Window
     {
+        List<Product> ProductList = new List<Product>();
+        List<string> ManufacturerList = new List<string>();
         public ProductListWindow()
         {
             InitializeComponent();
-            LVProduct.ItemsSource = Context.Product.OrderBy(i => i.ID).ToList();
+            ProductList = Context.Product.OrderBy(i => i.ID).ToList();
+            LVProduct.ItemsSource = ProductList;
+
+            foreach (var item in Context.Manufacturer.OrderBy(i => i.ID))
+            {
+                ManufacturerList.Add(item.Name);
+            }
+            ManufacturerList.Insert(0, "Все");
+            CBManufacturer.ItemsSource = ManufacturerList;
+            CBManufacturer.SelectedIndex = 0;
+
+            CBSort.ItemsSource = new List<string>()
+            {
+                "По умолчанию",
+                "Цена (по возрастанию)",
+                "Цена (по убыванию)"
+            };
+            CBSort.SelectedIndex = 0;
 
             TBlCount.Text = Context.Product.Count().ToString();
             TBlFilteredCount.Text = TBlCount.Text;
@@ -31,7 +51,20 @@ namespace BeautySalon_Brovushka.Windows
 
         private void Filter()
         {
+            //Фильтрация и сортировка не работает
+            ProductList = Context.Product.OrderBy(i => i.ID).ToList();
+            //Фильтрация
+            if (CBManufacturer.SelectedIndex > 0)
+            {
+                ProductList = ProductList.Where(i => i.ManufacturerID == CBManufacturer.SelectedIndex).ToList();
+            }
 
+            //Поиск
+            ProductList = ProductList
+                .Where(i => i.Title.Contains(TBName.Text))
+                .Where(i => i.Description.Contains(TBDescription.Text)).ToList();
+
+            LVProduct.ItemsSource = ProductList;
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)

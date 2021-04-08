@@ -63,6 +63,7 @@
                        TextAlignment="Right" FontSize="14" FontFamily="Tahoma"/>
 
             <TextBox Grid.Row="0" Name="TBName" Grid.Column="1"
+                     VerticalContentAlignment="Center"
                      VerticalAlignment="Center" Height="30"
                      FontSize="14" FontFamily="Tahoma"
                      TextChanged="TBName_TextChanged"/>
@@ -72,6 +73,7 @@
                        TextAlignment="Right" FontSize="14" FontFamily="Tahoma"/>
 
             <TextBox Grid.Row="0" Name="TBDescription" Grid.Column="3"
+                     VerticalContentAlignment="Center"
                      VerticalAlignment="Center" Height="30"
                      FontSize="14" FontFamily="Tahoma"
                      TextChanged="TBDescription_TextChanged"/>
@@ -81,6 +83,7 @@
                        TextAlignment="Right" FontSize="14" FontFamily="Tahoma"/>
 
             <ComboBox Grid.Row="1" Name="CBManufacturer" Grid.Column="1"
+                      VerticalContentAlignment="Center"
                       VerticalAlignment="Center" Height="30"
                       FontSize="14" FontFamily="Tahoma"
                       SelectionChanged="CBManufacturer_SelectionChanged"/>
@@ -90,6 +93,7 @@
                        TextAlignment="Right" FontSize="14" FontFamily="Tahoma"/>
 
             <ComboBox Grid.Row="1" Name="CBSort" Grid.Column="3"
+                      VerticalContentAlignment="Center"
                       VerticalAlignment="Center" Height="30"
                       FontSize="14" FontFamily="Tahoma"
                       SelectionChanged="CBSort_SelectionChanged"/>
