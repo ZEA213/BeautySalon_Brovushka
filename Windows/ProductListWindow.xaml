@@ -4,9 +4,46 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BeautySalon_Brovushka.Windows"
-        mc:Ignorable="d"
-        Title="ProductListWindow" Height="450" Width="800">
+        mc:Ignorable="d" Icon="/Resources/beauty_logo.ico"
+        Title="Салон красоты ''Бровушка''  -  Список товаров"
+        Height="600" Width="800" WindowStartupLocation="CenterScreen"
+        MinHeight="600" MinWidth="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" Orientation="Horizontal">
+                <Image Source="/Resources/beauty_logo.png" Margin="15,5,5,5"
+                       VerticalAlignment="Center"/>
+
+                <TextBlock Text="Салон красоты ''Бровушка''"
+                           VerticalAlignment="Center"
+                           TextWrapping="Wrap" Width="120"
+                           TextAlignment="Center"
+                           FontSize="15" FontFamily="Tahoma"/>
+            </StackPanel>
+            
+            <Button Grid.Column="3" Content="Выход"
+                    Margin="30,20" FontSize="15" Background="#ff4a6d"
+                    FontFamily="Tahoma" Click="Exit_Click"/>
+        </Grid>
+
+        <TextBlock Grid.Row="1" Text="Список товаров"
+                   VerticalAlignment="Center" HorizontalAlignment="Left"
+                   Margin="20,0" TextAlignment="Left"
+                   FontSize="18" FontFamily="Tahoma"/>
     </Grid>
 </Window>
