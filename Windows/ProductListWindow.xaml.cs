@@ -24,11 +24,39 @@ namespace BeautySalon_Brovushka.Windows
         {
             InitializeComponent();
             LVProduct.ItemsSource = Context.Product.OrderBy(i => i.ID).ToList();
+
+            TBlCount.Text = Context.Product.Count().ToString();
+            TBlFilteredCount.Text = TBlCount.Text;
+        }
+
+        private void Filter()
+        {
+
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void CBSort_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Filter();
+        }
+
+        private void CBManufacturer_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Filter();
+        }
+
+        private void TBDescription_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Filter();
+        }
+
+        private void TBName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Filter();
         }
     }
 }
